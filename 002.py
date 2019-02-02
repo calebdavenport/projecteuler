@@ -35,10 +35,7 @@ def main():
     right = 2
     while(right < MAX):
         total += right
-        temp_l = left + 2 * right
-        temp_r = 2 * left + 3 * right
-        left = temp_l
-        right = temp_r
+        left, right = left + 2 * right, 2 * left + 3 * right
     print(total)
 
 

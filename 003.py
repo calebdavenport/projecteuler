@@ -27,10 +27,10 @@ def main():
     print(largestFactor(NUM))
 
 
-def largestFactor(composite):
-    for i in range(2, int(math.floor(math.sqrt(composite))) + 1):
+def largestFactor(composite, factor=2):
+    for i in range(factor, int(math.floor(math.sqrt(composite))) + 1):
         if composite % i == 0:
-            return largestFactor(composite // i)
+            return largestFactor(composite // i, factor)
     else:
         return composite
 
